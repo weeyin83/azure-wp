@@ -41,6 +41,7 @@ define('DB_COLLATE', '');
  * @since 2.6.0
  */
 define('AUTH_KEY',         'd906bdec6cfddcd9d8f04fd8d31c846213efe91a');
+
 define('SECURE_AUTH_KEY',  '1fe346ad7383bbd20f650b3a4ee54fdd05916c7a');
 define('LOGGED_IN_KEY',    '846c675058d59afb856c4c00379d756636c94a8c');
 define('NONCE_KEY',        '3738296ce77b993ac79ec31f14311706fabda535');
@@ -85,6 +86,7 @@ if(strtolower(getenv('FORCE_SSL')) == 'true' && $_SERVER['HTTPS'] != 'on' && emp
     header('Location: ' . $redirect);
     exit();
 }
+define('WP_ALLOW_REPAIR', true);
 /* That's all, stop editing! Happy blogging. */
 /** Absolute path to the WordPress directory. */
 if ( !defined('ABSPATH') )
