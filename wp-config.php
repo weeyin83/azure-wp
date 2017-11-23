@@ -86,7 +86,23 @@ if(strtolower(getenv('FORCE_SSL')) == 'true' && $_SERVER['HTTPS'] != 'on' && emp
     header('Location: ' . $redirect);
     exit();
 }
+//Enable WP_DEBUG mode
+define('WP_DEBUG', true);
+
+
+//Enable Debug Logging to /wp-content/debug.log
+define('WP_DEBUG_LOG', true);
+
+
+//Supress errors and warnings to screen
+define('WP_DEBUG_DISPLAY', false);
+
+//Supress PHP errors to screen
+ini_set('display_errors', 0);
+
+//Allow repair
 define('WP_ALLOW_REPAIR', true);
+
 /* That's all, stop editing! Happy blogging. */
 /** Absolute path to the WordPress directory. */
 if ( !defined('ABSPATH') )
